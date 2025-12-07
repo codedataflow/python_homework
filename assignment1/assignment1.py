@@ -34,7 +34,6 @@ def calc(arg1, arg2, math_operation = "multiply"):
         return "You can't divide by 0!"
     except TypeError:
         return "You can't multiply those values!"
-    return None
 
 # Task 4: Data Type Conversion
 def  data_type_conversion(value, data_type): # float, str, int
@@ -72,10 +71,10 @@ def grade(*args):
         return "Invalid data was provided."
 
 # Task 6: Use a For Loop with a Range
-def repeat(str, count):
+def repeat(txt, count):
     result = ""
     for i in range(count):
-        result += str
+        result += txt
     return result    
         
 # Task 7: Student Scores, Using **kwargs
@@ -99,14 +98,14 @@ def titleize(str):
     # FIRST element in collection should be ALWAYS capitalized
     result.append(words[0].capitalize())
     # iterate collection from the SECOND to the PENULTIMATE element
-    for word in words[1:len(words)-1]:
+    for word in words[1:-1]:
         # result.append(word if word in little_words else word.capitalize())
         if word in little_words:
             result.append(word)
         else:
             result.append(word.capitalize())
     # LAST element in collection should be ALWAYS capitalized
-    result.append(words[len(words)-1].capitalize())
+    result.append(words[-1].capitalize())
     return " ".join(result)
 
 # Task 9: Hangman, with more String Operations
